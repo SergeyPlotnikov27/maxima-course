@@ -8,10 +8,12 @@
 </head>
 
 <body>
-    <div class="container">
-        <a href="login.php">Вход</a>
-        <a href="registration.php">Регистрация</a>
-    </div>
+    <?php
+    include('vars.php');
+    include('functions.php');
+    $tasksTree = makeTree($tasks);
+    echo drawTree($tasksTree);
+    ?>
 </body>
 
 </html>
